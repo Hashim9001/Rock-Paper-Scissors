@@ -1,7 +1,9 @@
 import random
+#List to randomly choose opponent
 myList = ["rock", "paper", "scissors"]
 ranNum = random.randint(0,2)
 
+#Checks to see wheter or not you win, lose, or tie
 def check(choose, rand):
     print("Your opponent chose " + myList[rand])
     if choose == "rock":
@@ -28,6 +30,7 @@ def check(choose, rand):
         elif rand == 2:
             print("You tie!\n")
 
+#Gets user input for rock, paper, or scissors
 def chooseIcon():
     chosen = input("Type 'Rock', 'Paper', or 'Scissors' to choose!\n").lower()
     if chosen == "rock":
@@ -40,6 +43,7 @@ def chooseIcon():
         print("That is an invalid answer please write 'Rock', 'Paper', or 'Scissors'\n")
         chooseIcon()
 
+#Infinite loop to restart the game
 while True:
         wantToPlay = input("Do you want to play rock, paper, scissors?\n").lower()
         if wantToPlay == "yes":
